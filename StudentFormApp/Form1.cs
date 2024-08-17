@@ -6,5 +6,11 @@ namespace StudentFormApp
 		{
 			InitializeComponent();
 		}
+
+		private void button1_Click(object sender, EventArgs e)
+		{
+			student ss= new student();
+			ss.reg(txtname.Text, txtcourse);
+		}
 	}
 }

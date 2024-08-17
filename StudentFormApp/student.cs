@@ -15,7 +15,14 @@ namespace StudentFormApp
 
 		public void reg(string name, string course)
 		{
-			SqlConnection con = new SqlConnection("server=.; int")
+			SqlConnection con = new SqlConnection("server=.; intial catalog=kschool; User Id=sa; password=admin123;");
+
+			string sql = "insert into course(stname,course) values('" + name + "', '" + course + "')";
+			con.Open();
+
+			SqlCommand cmd = new SqlCommand(sql, con);
+			cmd.ExecuteNonQuery();
+			con.Close();
 		}
 
 	}
