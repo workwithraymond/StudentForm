@@ -9,8 +9,17 @@ namespace StudentFormApp
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			student ss= new student();
-			ss.reg(txtname.Text, txtcourse);
+			Student ss = new Student();
+			ss.Reg(txtname.Text, txtcourse.Text);
+			MessageBox.Show("Record Added");
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			Student a = new Student();
+
+			List<Student> cl = a.GetAllStudents();
+			dataGridView1.DataSource = cl;
 		}
 	}
 }

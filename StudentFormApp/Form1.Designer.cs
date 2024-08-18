@@ -82,6 +82,7 @@
 			// 
 			// dataGridView1
 			// 
+			dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 			dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			dataGridView1.Location = new Point(631, 30);
 			dataGridView1.Name = "dataGridView1";
@@ -97,11 +98,13 @@
 			button2.TabIndex = 6;
 			button2.Text = "View";
 			button2.UseVisualStyleBackColor = true;
+			button2.Click += button2_Click;
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(10F, 25F);
 			AutoScaleMode = AutoScaleMode.Font;
+			BackColor = SystemColors.ActiveCaption;
 			ClientSize = new Size(1282, 653);
 			Controls.Add(button2);
 			Controls.Add(dataGridView1);
